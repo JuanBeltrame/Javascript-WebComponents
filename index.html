@@ -17,7 +17,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
             border-radius: 10px;
@@ -27,6 +27,12 @@
         h1 {
             color: #333;
             margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
         .components-grid {
             display: grid;
@@ -35,7 +41,7 @@
             margin-top: 30px;
         }
         .component-card {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             border: 2px solid #667eea;
             border-radius: 8px;
             padding: 20px;
@@ -43,63 +49,111 @@
             color: #333;
             transition: all 0.3s ease;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
         .component-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-            background: white;
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #fff;
         }
         .component-card h3 {
-            color: #667eea;
             margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .component-card p {
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+        .btn-view {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .component-card:hover .btn-view {
+            background: white;
+            color: #667eea;
+        }
+        .github-link {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .github-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .github-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📦 Javascript Web Components</h1>
-        <p>Colección de componentes reutilizables construidos con Web Components</p>
+        <p class="subtitle">Colección de componentes reutilizables construidos con Web Components nativos</p>
         
         <div class="components-grid">
             <a href="ContadorPalabras/" class="component-card">
                 <h3>📝 Contador de Palabras</h3>
-                <p>Componente para contar palabras en tiempo real</p>
+                <p>Componente para contar palabras en tiempo real. Detecta la cantidad de palabras mientras escribes.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="GestorDeConsultas/" class="component-card">
                 <h3>📋 Gestor de Consultas</h3>
-                <p>Gestiona y organiza tus consultas</p>
+                <p>Gestiona y organiza tus consultas de forma eficiente. Interfaz intuitiva para administración.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="ImputComponent/" class="component-card">
                 <h3>⌨️ Input Component</h3>
-                <p>Componente de entrada personalizado</p>
+                <p>Componente de entrada personalizado con validaciones y estilos avanzados.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="ListaEditable/" class="component-card">
                 <h3>✏️ Lista Editable</h3>
-                <p>Lista con capacidades de edición</p>
+                <p>Lista dinámica con capacidades de edición, agregar y eliminar elementos en tiempo real.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="ModalComponent/" class="component-card">
                 <h3>🪟 Modal Component</h3>
-                <p>Modal reutilizable y flexible</p>
+                <p>Modal reutilizable y flexible para mostrar contenido superpuesto sobre la página.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="TabsComponent/" class="component-card">
                 <h3>📑 Tabs Component</h3>
-                <p>Sistema de pestañas para contenido</p>
+                <p>Sistema de pestañas interactivo para organizar contenido en múltiples secciones.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="TarjetasHTML/" class="component-card">
                 <h3>🎴 Tarjetas HTML</h3>
-                <p>Componentes de tarjetas personalizables</p>
+                <p>Componentes de tarjetas personalizables para mostrar información de forma atractiva.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
             
             <a href="TextoEditable/" class="component-card">
                 <h3>📄 Texto Editable</h3>
-                <p>Componente de texto con edición inline</p>
+                <p>Componente de texto con edición inline. Edita directamente sin salir del contexto.</p>
+                <div class="btn-view">Ver Demo →</div>
             </a>
+        </div>
+
+        <div class="github-link">
+            <p>📌 Repositorio: <a href="https://github.com/JuanBeltrame/Javascript-WebComponents" target="_blank">Ver en GitHub</a></p>
         </div>
     </div>
 </body>
