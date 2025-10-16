@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Component | Web Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabs Component</h1>
+        <p class="subtitle">Componente de pestañas personalizado usando Web Components y Vanilla JavaScript</p>
+
+        <div class="demo-section">
+            <h2>Ejemplo Básico</h2>
+            <p class="description">Tabs simples con contenido básico</p>
+            
+            <custom-tabs>
+                <tab-item label="Inicio" icon="🏠" active>
+                    <h3>Bienvenido al Tab de Inicio</h3>
+                    <p>Este es el contenido del primer tab. Los tabs son una excelente forma de organizar información relacionada sin ocupar demasiado espacio en la pantalla.</p>
+                    <ul>
+                        <li>Navegación intuitiva</li>
+                        <li>Contenido organizado</li>
+                        <li>Mejor experiencia de usuario</li>
+                    </ul>
+                </tab-item>
+
+                <tab-item label="Perfil" icon="👤">
+                    <h3>Información de Perfil</h3>
+                    <p>Aquí puedes ver y editar tu información personal.</p>
+                    <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p><strong>Nombre:</strong> Juan Beltrame</p>
+                        <p><strong>Email:</strong> juan@ejemplo.com</p>
+                        <p><strong>Rol:</strong> Desarrollador</p>
+                    </div>
+                </tab-item>
+
+                <tab-item label="Configuración" icon="⚙️">
+                    <h3>Configuración del Sistema</h3>
+                    <p>Personaliza tu experiencia ajustando las siguientes opciones:</p>
+                    <div style="margin-top: 15px;">
+                        <label style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox" checked> Notificaciones por email
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox"> Modo oscuro
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox" checked> Guardar historial
+                        </label>
+                    </div>
+                </tab-item>
+
+                <tab-item label="Ayuda" icon="❓">
+                    <h3>Centro de Ayuda</h3>
+                    <p>¿Necesitas asistencia? Estamos aquí para ayudarte.</p>
+                    <h4 style="margin-top: 20px;">Preguntas Frecuentes</h4>
+                    <ol>
+                        <li>¿Cómo cambio de tab?</li>
+                        <li>¿Puedo usar el teclado?</li>
+                        <li>¿Es responsive el componente?</li>
+                    </ol>
+                    <p style="margin-top: 15px;">Para más información, visita nuestra documentación completa.</p>
+                </tab-item>
+            </custom-tabs>
+        </div>
+
+        <div class="demo-section">
+            <h2>Tabs Verticales</h2>
+            <p class="description">Orientación vertical para menús laterales</p>
+            
+            <custom-tabs orientation="vertical">
+                <tab-item label="Dashboard" icon="📊" active>
+                    <h3>Panel de Control</h3>
+                    <p>Vista general de tus métricas y estadísticas principales.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">1,234</div>
+                            <div class="stat-label">Usuarios</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">567</div>
+                            <div class="stat-label">Ventas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">Tasa de éxito</div>
+                        </div>
+                    </div>
+                </tab-item>
+
+                <tab-item label="Análisis" icon="📈">
+                    <h3>Análisis y Reportes</h3>
+                    <p>Datos detallados sobre el rendimiento de tu aplicación.</p>
+                    <p style="margin-top: 15px;">Los tabs verticales son ideales para:</p>
+                    <ul style="line-height: 1.8;">
+                        <li>Paneles de administración</li>
+                        <li>Menús de navegación extensos</li>
+                        <li>Configuraciones avanzadas</li>
+                        <li>Aplicaciones con muchas secciones</li>
+                    </ul>
+                </tab-item>
+
+                <tab-item label="Reportes" icon="📄">
+                    <h3>Generador de Reportes</h3>
+                    <p>Crea reportes personalizados según tus necesidades.</p>
+                    <button class="btn btn-primary" style="margin-top: 15px;">Generar Reporte</button>
+                </tab-item>
+
+                <tab-item label="Exportar" icon="💾">
+                    <h3>Exportar Datos</h3>
+                    <p>Descarga tus datos en diferentes formatos.</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn btn-secondary">CSV</button>
+                        <button class="btn btn-secondary">Excel</button>
+                        <button class="btn btn-secondary">PDF</button>
+                        <button class="btn btn-secondary">JSON</button>
+                    </div>
+                </tab-item>
+            </custom-tabs>
+        </div>
+
+        <div class="demo-section">
+            <h2>Tabs con Contenido Dinámico</h2>
+            <p class="description">Contenido cargado dinámicamente con lazy loading</p>
+            
+            <custom-tabs id="dynamicTabs">
+                <tab-item label="HTML" icon="📝" active>
+                    <h3>Lenguaje de Marcado HTML</h3>
+                    <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web.</p>
+                    <pre style="background: #f3f4f6; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>&lt;div class="container"&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </tab-item>
+
+                <tab-item label="CSS" icon="🎨">
+                    <h3>Hojas de Estilo en Cascada</h3>
+                    <p>CSS se utiliza para dar estilo y diseño a las páginas web.</p>
+                    <pre style="background: #f3f4f6; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+}</code></pre>
+                </tab-item>
+
+                <tab-item label="JavaScript" icon="⚡">
+                    <h3>Lenguaje de Programación JavaScript</h3>
+                    <p>JavaScript añade interactividad y comportamiento dinámico a las páginas web.</p>
+                    <pre style="background: #f3f4f6; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>class TabsComponent extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+}</code></pre>
+                </tab-item>
+
+                <tab-item label="Web Components" icon="🧩">
+                    <h3>Web Components</h3>
+                    <p>Tecnología que permite crear elementos HTML personalizados y reutilizables.</p>
+                    <h4 style="margin-top: 15px;">Características principales:</h4>
+                    <ul style="line-height: 1.8;">
+                        <li><strong>Custom Elements:</strong> Define tus propios elementos HTML</li>
+                        <li><strong>Shadow DOM:</strong> Encapsulación de estilos y comportamiento</li>
+                        <li><strong>HTML Templates:</strong> Fragmentos de HTML reutilizables</li>
+                        <li><strong>ES Modules:</strong> Importación modular de componentes</li>
+                    </ul>
+                </tab-item>
+            </custom-tabs>
+        </div>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

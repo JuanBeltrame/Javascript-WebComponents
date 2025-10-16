@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Editable | Web Components</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>Texto Editable</h1>
+
+    <template id="plantilla-persona">
+        <div>
+            <h2>Tarjeta de Identidad Personal</h2>
+            <slot name="nombre-persona">NOMBRE FALTANTE</slot>
+            <ul>
+                <li><slot name="edad-persona">EDAD FALTANTE</slot></li>
+                <li><slot name="ocupacion-persona">OCUPACIÓN FALTANTE</slot></li>
+            </ul>
+        </div>
+    </template>
+
+    <detalles-persona>
+        <p slot="nombre-persona"><editar-palabra>Juan</editar-palabra> Beltrame</p>
+        <span slot="edad-persona"><editar-palabra>38</editar-palabra> años</span>
+        <span slot="ocupacion-persona">Desarrollador de Software</span>
+    </detalles-persona>
+
+    <p>Mi nombre es <editar-palabra>Juan</editar-palabra> Beltrame, y soy desarrollador de software.</p>
+</body>
+</html>

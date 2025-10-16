@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.demo-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.demo-section h2 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #667eea;
+}
+
+.description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+custom-tabs {
+    margin-top: 1.5rem;
+}
+
+tab-item {
+    line-height: 1.8;
+    color: #374151;
+}
+
+tab-item h3 {
+    color: #1f2937;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+tab-item h4 {
+    color: #374151;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+tab-item p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+tab-item ul,
+tab-item ol {
+    margin-left: 1.5rem;
+    color: #374151;
+}
+
+tab-item li {
+    margin-bottom: 0.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+.output {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.output.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message {
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.message.info {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 2px solid #3b82f6;
+}
+
+.message strong {
+    font-size: 1.5rem;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #667eea;
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.demo-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.demo-section:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.demo-section:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.demo-section:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .demo-section {
+        padding: 1.5rem;
+    }
+
+    .demo-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    pre {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .demo-section {
+        padding: 1rem;
+    }
+
+    tab-item h3 {
+        font-size: 1.25rem;
+    }
+}

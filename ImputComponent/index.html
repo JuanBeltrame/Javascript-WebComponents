@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Component - Web Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Custom Input Component</h1>
+        <p class="subtitle">Componente de input personalizado usando Web Components</p>
+
+        <div class="demo-section">
+            <h2>Ejemplos de uso</h2>
+
+            
+            <custom-input 
+                label="Nombre de usuario"
+                placeholder="Ingresa tu nombre"
+                required>
+            </custom-input>
+
+            
+            <custom-input 
+                label="Correo electrónico"
+                type="email"
+                placeholder="ejemplo@correo.com"
+                required
+                error-message="Por favor ingresa un email válido">
+            </custom-input>
+
+            
+            <custom-input 
+                label="Contraseña"
+                type="password"
+                placeholder="Mínimo 8 caracteres"
+                minlength="8"
+                required
+                helper-text="La contraseña debe tener al menos 8 caracteres">
+            </custom-input>
+
+            
+            <custom-input 
+                label="Edad"
+                type="number"
+                placeholder="Ingresa tu edad"
+                min="18"
+                max="100"
+                helper-text="Debes ser mayor de 18 años">
+            </custom-input>
+
+            
+            <custom-input 
+                label="Campo deshabilitado"
+                value="Este campo está deshabilitado"
+                disabled>
+            </custom-input>
+
+            
+            <custom-input 
+                label="Buscar"
+                type="search"
+                placeholder="Buscar..."
+                icon="🔍">
+            </custom-input>
+
+            
+            <custom-input 
+                label="Descripción"
+                placeholder="Escribe una descripción"
+                maxlength="100"
+                show-counter>
+            </custom-input>
+        </div>
+
+        <div class="demo-section">
+            <h2>Formulario de ejemplo</h2>
+            <form id="demoForm">
+                <custom-input 
+                    id="nameInput"
+                    label="Nombre completo"
+                    placeholder="Juan Pérez"
+                    required>
+                </custom-input>
+
+                <custom-input 
+                    id="emailInput"
+                    label="Email"
+                    type="email"
+                    placeholder="juan@ejemplo.com"
+                    required>
+                </custom-input>
+
+                <custom-input 
+                    id="phoneInput"
+                    label="Teléfono"
+                    type="tel"
+                    placeholder="+54 11 1234-5678"
+                    pattern="[+]?[0-9\s\-]+"
+                    helper-text="Formato: +54 11 1234-5678">
+                </custom-input>
+
+                <button type="submit" class="submit-btn">Enviar formulario</button>
+            </form>
+
+            <div id="formOutput" class="output"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

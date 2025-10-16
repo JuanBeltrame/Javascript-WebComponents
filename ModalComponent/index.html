@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Component | Web Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modal Component</h1>
+        <p class="subtitle">Componente modal personalizado usando Web Components y Vanilla JavaScript</p>
+
+        <div class="demo-section">
+            <h2>Ejemplos de uso</h2>
+
+            
+            <div class="demo-card">
+                <h3>Modal Básico</h3>
+                <p>Un modal simple con título y contenido.</p>
+                <button class="btn btn-primary" onclick="document.getElementById('modal1').open()">
+                    Abrir Modal Básico
+                </button>
+            </div>
+
+            
+            <div class="demo-card">
+                <h3>Modal con Formulario</h3>
+                <p>Modal que contiene un formulario de contacto.</p>
+                <button class="btn btn-success" onclick="document.getElementById('modal2').open()">
+                    Abrir Modal con Formulario
+                </button>
+            </div>
+
+            
+            <div class="demo-card">
+                <h3>Modal Grande</h3>
+                <p>Modal con tamaño grande para más contenido.</p>
+                <button class="btn btn-info" onclick="document.getElementById('modal3').open()">
+                    Abrir Modal Grande
+                </button>
+            </div>
+
+            
+            <div class="demo-card">
+                <h3>Modal de Confirmación</h3>
+                <p>Modal para confirmaciones importantes.</p>
+                <button class="btn btn-danger" onclick="document.getElementById('modal4').open()">
+                    Abrir Modal de Confirmación
+                </button>
+            </div>
+        </div>
+
+        
+        <custom-modal id="modal1" title="¡Bienvenido!">
+            <p>Este es un modal básico creado con Web Components.</p>
+            <p>Puedes cerrarlo haciendo clic en el botón de cerrar, presionando ESC, o haciendo clic fuera del modal.</p>
+        </custom-modal>
+
+        <custom-modal id="modal2" title="Formulario de Contacto" size="medium">
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+                <div>
+                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: 600;">Nombre:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
+                </div>
+                <div>
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
+                </div>
+                <div>
+                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: 600;">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Enviar</button>
+            </form>
+        </custom-modal>
+
+        <custom-modal id="modal3" title="Modal Grande con Mucho Contenido" size="large">
+            <h3>Características del Modal Component</h3>
+            <ul style="line-height: 1.8;">
+                <li><strong>Shadow DOM:</strong> Estilos encapsulados que no afectan al resto de la página</li>
+                <li><strong>Accesibilidad:</strong> Soporte completo para teclado (ESC para cerrar, TAB trap)</li>
+                <li><strong>Múltiples tamaños:</strong> small, medium, large</li>
+                <li><strong>Eventos personalizados:</strong> open, close, confirm, cancel</li>
+                <li><strong>Backdrop:</strong> Cierre al hacer clic fuera del modal</li>
+                <li><strong>Animaciones:</strong> Transiciones suaves de entrada y salida</li>
+                <li><strong>Responsive:</strong> Se adapta a diferentes tamaños de pantalla</li>
+            </ul>
+            <p style="margin-top: 20px;">
+                Los Web Components nos permiten crear elementos reutilizables y encapsulados
+                que pueden ser utilizados en cualquier proyecto sin conflictos de estilos o comportamiento.
+            </p>
+            <p>
+                Este modal component es un ejemplo perfecto de cómo crear componentes complejos
+                con Vanilla JavaScript sin necesidad de frameworks externos.
+            </p>
+        </custom-modal>
+
+        <custom-modal id="modal4" title="⚠️ Confirmación Requerida" size="small" type="confirm">
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                ¿Estás seguro de que deseas realizar esta acción?
+            </p>
+            <p style="color: #6b7280; margin-top: 10px;">
+                Esta acción no se puede deshacer.
+            </p>
+        </custom-modal>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

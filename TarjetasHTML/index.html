@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Elementos - Web Component con Shadow DOM</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Detalles de Elementos - Web Component con Shadow DOM</h1>
+
+    <element-details 
+      data-name="div" 
+      data-description="Elemento de contenedor genérico que se utiliza para agrupar contenido y aplicar estilos CSS o manipulación JavaScript."
+      data-attributes='[{"name":"class","desc":"Define una o más clases CSS para el elemento."},{"name":"id","desc":"Define un identificador único para el elemento."}]'>
+    </element-details>
+
+    <element-details 
+      data-name="section" 
+      data-description="Representa una sección genérica de un documento, típicamente con un encabezado. Agrupa contenido temático relacionado."
+      data-attributes='[{"name":"aria-label","desc":"Proporciona una etiqueta accesible para tecnologías asistivas."}]'>
+    </element-details>
+
+    <element-details 
+      data-name="article" 
+      data-description="Representa una composición independiente en un documento, como un post de blog, un artículo de noticias o un comentario."
+      data-attributes='[]'>
+    </element-details>
+
+    <script src="main.js"></script>
+  </body>
+</html>
