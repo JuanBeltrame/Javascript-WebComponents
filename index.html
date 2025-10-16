@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Web Components - Proyectos Interactivos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Javascript Web Components</h1>
+            <p class="subtitle">Colección de componentes web interactivos construidos con Vanilla JavaScript y Web Components</p>
+        </header>
+
+        <div class="projects-grid">
+            <a href="./GestorDeConsultas/" class="project-card">
+                <span class="project-icon">📋</span>
+                <h2 class="project-title">Gestor de Consultas</h2>
+                <p class="project-description">Sistema completo de gestión de consultas con formulario, lista de consultas y componentes reutilizables. Incluye header, hero, features y footer.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Web Components</span>
+                    <span class="tech-tag">Shadow DOM</span>
+                    <span class="tech-tag">Custom Elements</span>
+                </div>
+            </a>
+
+            <a href="./ModalComponent/" class="project-card">
+                <span class="project-icon">💬</span>
+                <h2 class="project-title">Modal Component</h2>
+                <p class="project-description">Componente modal personalizado con múltiples tamaños, animaciones suaves, accesibilidad completa y eventos personalizados. Incluye soporte para ESC y backdrop.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Accesibilidad</span>
+                    <span class="tech-tag">Eventos Custom</span>
+                    <span class="tech-tag">Animaciones</span>
+                </div>
+            </a>
+
+            <a href="./TabsComponent/" class="project-card">
+                <span class="project-icon">📑</span>
+                <h2 class="project-title">Tabs Component</h2>
+                <p class="project-description">Componente de pestañas con orientación horizontal y vertical. Soporte para iconos, navegación por teclado y contenido dinámico con lazy loading.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Navegación</span>
+                    <span class="tech-tag">Responsive</span>
+                    <span class="tech-tag">Lazy Load</span>
+                </div>
+            </a>
+
+            <a href="./ContadorPalabras/" class="project-card">
+                <span class="project-icon">🔢</span>
+                <h2 class="project-title">Contador de Palabras</h2>
+                <p class="project-description">Contador de palabras en tiempo real para contenido editable. Demuestra el uso de elementos extendidos y actualización dinámica de contenido.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Customized Built-in</span>
+                    <span class="tech-tag">ContentEditable</span>
+                    <span class="tech-tag">Real-time</span>
+                </div>
+            </a>
+
+            <a href="./TextoEditable/" class="project-card">
+                <span class="project-icon">✏️</span>
+                <h2 class="project-title">Texto Editable</h2>
+                <p class="project-description">Componente de texto editable inline con slots y templates. Permite editar palabras específicas dentro de un contexto más amplio.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Slots</span>
+                    <span class="tech-tag">Templates</span>
+                    <span class="tech-tag">Inline Edit</span>
+                </div>
+            </a>
+
+            <a href="./ListaEditable/" class="project-card">
+                <span class="project-icon">📝</span>
+                <h2 class="project-title">Lista Editable</h2>
+                <p class="project-description">Lista de tareas editable con capacidad de agregar, editar y eliminar items. Perfecto para gestión de tareas y notas.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">CRUD</span>
+                    <span class="tech-tag">Interactivo</span>
+                    <span class="tech-tag">Lista</span>
+                </div>
+            </a>
+
+            <a href="./ImputComponent/" class="project-card">
+                <span class="project-icon">⌨️</span>
+                <h2 class="project-title">Input Component</h2>
+                <p class="project-description">Input personalizado con validación, iconos, contadores de caracteres, mensajes de error y estados. Soporte para múltiples tipos de input.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Validación</span>
+                    <span class="tech-tag">Formularios</span>
+                    <span class="tech-tag">UX</span>
+                </div>
+            </a>
+
+            <a href="./TarjetasHTML/" class="project-card">
+                <span class="project-icon">🃏</span>
+                <h2 class="project-title">Tarjetas HTML</h2>
+                <p class="project-description">Componente de tarjetas con Shadow DOM que muestra detalles de elementos HTML. Incluye información de atributos y descripciones detalladas.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Shadow DOM</span>
+                    <span class="tech-tag">Educativo</span>
+                    <span class="tech-tag">Cards</span>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>✨ Todos los proyectos están construidos con <strong>Vanilla JavaScript</strong> y <strong>Web Components API</strong></p>
+            <p style="margin-top: 10px;">Desarrollado por <a href="https://github.com/JuanBeltrame" target="_blank">Juan Beltrame</a></p>
+        </footer>
+    </div>
+</body>
+</html>
