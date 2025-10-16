@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Web Components</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .component-card {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+            background: white;
+        }
+        .component-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Javascript Web Components</h1>
+        <p>Colección de componentes reutilizables construidos con Web Components</p>
+        
+        <div class="components-grid">
+            <a href="ContadorPalabras/" class="component-card">
+                <h3>📝 Contador de Palabras</h3>
+                <p>Componente para contar palabras en tiempo real</p>
+            </a>
+            
+            <a href="GestorDeConsultas/" class="component-card">
+                <h3>📋 Gestor de Consultas</h3>
+                <p>Gestiona y organiza tus consultas</p>
+            </a>
+            
+            <a href="ImputComponent/" class="component-card">
+                <h3>⌨️ Input Component</h3>
+                <p>Componente de entrada personalizado</p>
+            </a>
+            
+            <a href="ListaEditable/" class="component-card">
+                <h3>✏️ Lista Editable</h3>
+                <p>Lista con capacidades de edición</p>
+            </a>
+            
+            <a href="ModalComponent/" class="component-card">
+                <h3>🪟 Modal Component</h3>
+                <p>Modal reutilizable y flexible</p>
+            </a>
+            
+            <a href="TabsComponent/" class="component-card">
+                <h3>📑 Tabs Component</h3>
+                <p>Sistema de pestañas para contenido</p>
+            </a>
+            
+            <a href="TarjetasHTML/" class="component-card">
+                <h3>🎴 Tarjetas HTML</h3>
+                <p>Componentes de tarjetas personalizables</p>
+            </a>
+            
+            <a href="TextoEditable/" class="component-card">
+                <h3>📄 Texto Editable</h3>
+                <p>Componente de texto con edición inline</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
